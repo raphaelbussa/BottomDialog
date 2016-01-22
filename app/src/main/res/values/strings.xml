@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Bottom Dialog</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_bug_report">Report bug</string>
+    <string name="action_social_share">Share app</string>
+    <string name="action_delete">Exit</string>
+    <string name="action_content_add">Add item</string>
+    <string name="ic_github">Source on Github</string>
+</resources>
