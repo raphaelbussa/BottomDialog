@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Bottom Dialog by rebus007</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Bottom Dialog</h1>
+        <h2>This is a custom dialog attached at the bottom</h2>
+        <a href="https://github.com/rebus007/BottomDialog" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="bottom-dialog" class="anchor" href="#bottom-dialog" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bottom Dialog</h1>
+
+<p>This is a custom dialog attached at the bottom</p>
+
+<p><img src="https://raw.githubusercontent.com/rebus007/BottomDialog/master/img/header.png" alt="Screen"></p>
+
+<h3>
+<a id="import" class="anchor" href="#import" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Import</h3>
+
+<p>At the moment the library is in my personal maven repo</p>
+
+<div class="highlight highlight-source-groovy-gradle"><pre><span class="pl-en">repositories</span> {
+    maven {
+        url <span class="pl-s"><span class="pl-pds">'</span>http://dl.bintray.com/raphaelbussa/maven<span class="pl-pds">'</span></span>
+    }
+}</pre></div>
+
+<div class="highlight highlight-source-groovy-gradle"><pre><span class="pl-en">dependencies</span> {
+    compile <span class="pl-s"><span class="pl-pds">'</span>rebus:bottom-dialog:0.0.1<span class="pl-pds">'</span></span>
+}</pre></div>
+
+<h3>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use</h3>
+
+<p>A sample dialog...</p>
+
+<div class="highlight highlight-source-java"><pre><span class="pl-k">private</span> <span class="pl-smi">BottomDialog</span> dialog;
+
+dialog <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">BottomDialog</span>(<span class="pl-smi">MainActivity</span><span class="pl-k">.</span><span class="pl-v">this</span>);
+                dialog<span class="pl-k">.</span>title(<span class="pl-smi">R</span><span class="pl-k">.</span>string<span class="pl-k">.</span>app_name);
+                dialog<span class="pl-k">.</span>canceledOnTouchOutside(<span class="pl-c1">true</span>);
+                dialog<span class="pl-k">.</span>cancelable(<span class="pl-c1">true</span>);
+                dialog<span class="pl-k">.</span>inflateMenu(<span class="pl-smi">R</span><span class="pl-k">.</span>menu<span class="pl-k">.</span>menu_main);
+                dialog<span class="pl-k">.</span>setOnItemSelectedListener(<span class="pl-k">new</span> <span class="pl-smi">BottomDialog</span>.<span class="pl-smi">OnItemSelectedListener</span>() {
+                    <span class="pl-k">@Override</span>
+                    <span class="pl-k">public</span> <span class="pl-k">boolean</span> <span class="pl-en">onItemSelected</span>(<span class="pl-k">int</span> <span class="pl-v">id</span>) {
+                        <span class="pl-k">switch</span> (id) {
+                            <span class="pl-k">case</span> <span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>action_social_share<span class="pl-k">:</span>
+                                <span class="pl-smi">Intent</span> s <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">Intent</span>(<span class="pl-smi">android.content<span class="pl-k">.</span>Intent</span><span class="pl-c1"><span class="pl-k">.</span>ACTION_SEND</span>);
+                                s<span class="pl-k">.</span>setType(<span class="pl-s"><span class="pl-pds">"</span>text/plain<span class="pl-pds">"</span></span>);
+                                s<span class="pl-k">.</span>putExtra(<span class="pl-smi">android.content<span class="pl-k">.</span>Intent</span><span class="pl-c1"><span class="pl-k">.</span>EXTRA_TEXT</span>, <span class="pl-s"><span class="pl-pds">"</span>https://github.com/rebus007/BottomDialog/issues<span class="pl-pds">"</span></span>);
+                                startActivity(<span class="pl-smi">Intent</span><span class="pl-k">.</span>createChooser(s, getResources()<span class="pl-k">.</span>getText(<span class="pl-smi">R</span><span class="pl-k">.</span>string<span class="pl-k">.</span>action_social_share)));
+                                <span class="pl-k">return</span> <span class="pl-c1">true</span>;
+                            <span class="pl-k">case</span> <span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>action_content_add<span class="pl-k">:</span>
+                                <span class="pl-smi">Item</span> item <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">Item</span>();
+                                item<span class="pl-k">.</span>setTitle(<span class="pl-s"><span class="pl-pds">"</span>New element<span class="pl-pds">"</span></span>);
+                                item<span class="pl-k">.</span>setIcon(getResources()<span class="pl-k">.</span>getDrawable(<span class="pl-smi">R</span><span class="pl-k">.</span>drawable<span class="pl-k">.</span>ic_action_action_bug_report));
+                                item<span class="pl-k">.</span>setId(<span class="pl-c1">100</span>);
+                                dialog<span class="pl-k">.</span>addItem(item);
+                                <span class="pl-k">return</span> <span class="pl-c1">false</span>;
+                            <span class="pl-k">case</span> <span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>action_delete<span class="pl-k">:</span>
+                                finish();
+                                <span class="pl-k">return</span> <span class="pl-c1">true</span>;
+                            <span class="pl-k">case</span> <span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>action_bug_report<span class="pl-k">:</span>
+                                <span class="pl-smi">Intent</span> i <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">Intent</span>(<span class="pl-smi">Intent</span><span class="pl-c1"><span class="pl-k">.</span>ACTION_VIEW</span>);
+                                i<span class="pl-k">.</span>setData(<span class="pl-smi">Uri</span><span class="pl-k">.</span>parse(<span class="pl-s"><span class="pl-pds">"</span>https://github.com/rebus007/BottomDialog/issues<span class="pl-pds">"</span></span>));
+                                startActivity(i);
+                                <span class="pl-k">return</span> <span class="pl-c1">true</span>;
+                            <span class="pl-k">case</span> <span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>ic_github<span class="pl-k">:</span>
+                                <span class="pl-smi">Intent</span> g <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">Intent</span>(<span class="pl-smi">Intent</span><span class="pl-c1"><span class="pl-k">.</span>ACTION_VIEW</span>);
+                                g<span class="pl-k">.</span>setData(<span class="pl-smi">Uri</span><span class="pl-k">.</span>parse(<span class="pl-s"><span class="pl-pds">"</span>https://github.com/rebus007/BottomDialog<span class="pl-pds">"</span></span>));
+                                startActivity(g);
+                                <span class="pl-k">return</span> <span class="pl-c1">true</span>;
+                            <span class="pl-k">case</span> <span class="pl-c1">100</span><span class="pl-k">:</span>
+                                <span class="pl-smi">Toast</span><span class="pl-k">.</span>makeText(<span class="pl-smi">MainActivity</span><span class="pl-k">.</span><span class="pl-v">this</span>, <span class="pl-s"><span class="pl-pds">"</span>New element clicked!!!<span class="pl-pds">"</span></span>, <span class="pl-smi">Toast</span><span class="pl-c1"><span class="pl-k">.</span>LENGTH_SHORT</span>)<span class="pl-k">.</span>show();
+                                <span class="pl-k">return</span> <span class="pl-c1">false</span>;
+                            <span class="pl-k">default</span><span class="pl-k">:</span>
+                                <span class="pl-k">return</span> <span class="pl-c1">false</span>;
+                        }
+                    }
+                });
+                dialog<span class="pl-k">.</span>show();</pre></div>
+
+<h3>
+<a id="sample" class="anchor" href="#sample" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sample</h3>
+
+<p>Browse the sample code <a href="https://github.com/rebus007/BottomDialog/tree/master/app">here</a></p>
+
+<h3>
+<a id="app-using-header-view" class="anchor" href="#app-using-header-view" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>App using Header View</h3>
+
+<p>If you use this lib <a href="mailto:raphaelbussa@gmail.com?subject=Bottom%20Dialog">contact me</a> and I will add it to the list below:</p>
+
+<h3>
+<a id="developed-by" class="anchor" href="#developed-by" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Developed By</h3>
+
+<p>Raphaël Bussa - <a href="mailto:raphaelbussa@gmail.com">raphaelbussa@gmail.com</a></p>
+
+<p><a href="https://twitter.com/rebus_007"> <img src="https://raw.githubusercontent.com/rebus007/BottomDialog/master/img/social/twitter-icon.png" alt="Twitter"> </a><a href="https://plus.google.com/+RaphaelBussa/posts"> <img src="https://raw.githubusercontent.com/rebus007/BottomDialog/master/img/social/google-plus-icon.png" alt="Google Plus"> </a><a href="https://www.linkedin.com/in/rebus007"> <img src="https://raw.githubusercontent.com/rebus007/BottomDialog/master/img/social/linkedin-icon.png" alt="Linkedin"> </a></p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h3>
+
+<pre><code>The MIT License (MIT)
+
+Copyright (c) 2016 Raphael Bussa &lt;raphaelbussa@gmail.com&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</code></pre>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/rebus007/BottomDialog/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/rebus007/BottomDialog/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/rebus007/BottomDialog"></a> is maintained by <a href="https://github.com/rebus007">rebus007</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
