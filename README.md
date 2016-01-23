@@ -1,4 +1,5 @@
 # Bottom Dialog
+[ ![Download](https://api.bintray.com/packages/raphaelbussa/maven/bottom-dialog/images/download.svg) ](https://bintray.com/raphaelbussa/maven/bottom-dialog/_latestVersion)
 
 This is a custom dialog attached at the bottom
 
