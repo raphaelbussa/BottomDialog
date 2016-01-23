@@ -1,4 +1,4 @@
-# BottomDialog
+# Bottom Dialog
 
 This is a custom dialog attached at the bottom
 
