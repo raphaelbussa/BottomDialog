@@ -16,7 +16,7 @@ repositories {
 ```
 ```Gradle
 dependencies {
-    compile 'rebus:bottom-dialog:0.0.1'
+    compile 'rebus:bottom-dialog:0.0.5'
 }
 ```
 ### How to use
