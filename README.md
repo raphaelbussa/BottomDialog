@@ -73,7 +73,7 @@ dialog = new BottomDialog(MainActivity.this);
 
 ### Sample
 Browse the sample code [here](https://github.com/rebus007/BottomDialog/tree/master/app)
-### App using Header View
+### App using Bottom Dialog
 If you use this lib [contact me](mailto:raphaelbussa@gmail.com?subject=Bottom Dialog) and I will add it to the list below:
 
 ###Developed By
