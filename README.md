@@ -1,6 +1,5 @@
 # Bottom Dialog
-[ ![Download](https://api.bintray.com/packages/raphaelbussa/maven/bottom-dialog/images/download.svg) ](https://bintray.com/raphaelbussa/maven/bottom-dialog/_latestVersion) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-BottomDialog-green.svg?style=true)](https://android-arsenal.com/details/1/3168)
-
+[ ![Download](https://api.bintray.com/packages/raphaelbussa/maven/bottom-dialog/images/download.svg) ](https://bintray.com/raphaelbussa/maven/bottom-dialog/_latestVersion) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-BottomDialog-green.svg?style=true)](https://android-arsenal.com/details/1/3168) [![API](https://img.shields.io/badge/API-11%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=11)
 
 This is a custom dialog attached at the bottom
 
