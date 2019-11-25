@@ -79,7 +79,7 @@ If you use this lib [contact me](mailto:raphaelbussa@gmail.com?subject=Bottom Di
 ### Developed By
 Raphaël Bussa - [raphaelbussa@gmail.com](mailto:raphaelbussa@gmail.com)
 
-[ ![Twitter](https://raw.githubusercontent.com/rebus007/BottomDialog/master/img/social/twitter-icon.png) ](https://twitter.com/rebus_007)[ ![Google Plus](https://raw.githubusercontent.com/rebus007/BottomDialog/master/img/social/google-plus-icon.png) ](https://plus.google.com/+RaphaelBussa/posts)[ ![Linkedin](https://raw.githubusercontent.com/rebus007/BottomDialog/master/img/social/linkedin-icon.png) ](https://www.linkedin.com/in/rebus007)
+[ ![Twitter](https://raw.githubusercontent.com/rebus007/BottomDialog/master/img/social/twitter-icon.png) ](https://twitter.com/raphaelbussa)[ ![Linkedin](https://raw.githubusercontent.com/rebus007/BottomDialog/master/img/social/linkedin-icon.png) ](https://www.linkedin.com/in/raphaelbussa)
 
 ### License
 ```
