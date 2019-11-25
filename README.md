@@ -3,7 +3,7 @@
 
 This is a custom dialog attached at the bottom
 
-![Screen](https://raw.githubusercontent.com/rebus007/BottomDialog/master/img/header.png)
+![Screen](https://raw.githubusercontent.com/raphaelbussa/BottomDialog/master/img/header.png)
 
 ### Import
 At the moment the library is in my personal maven repo
@@ -74,7 +74,7 @@ dialog = new BottomDialog(MainActivity.this);
 ### Sample
 Browse the sample code [here](https://github.com/rebus007/BottomDialog/tree/master/app)
 ### App using Bottom Dialog
-If you use this lib [contact me](mailto:raphaelbussa@gmail.com?subject=Bottom Dialog) and I will add it to the list below:
+If you use this lib [contact me](mailto:raphaelbussa@gmail.com) and I will add it to the list below:
 
 ### Developed By
 Raphaël Bussa - [raphaelbussa@gmail.com](mailto:raphaelbussa@gmail.com)
