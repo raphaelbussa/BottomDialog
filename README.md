@@ -72,14 +72,14 @@ dialog = new BottomDialog(MainActivity.this);
 ```
 
 ### Sample
-Browse the sample code [here](https://github.com/rebus007/BottomDialog/tree/master/app)
+Browse the sample code [here](https://github.com/raphaelbussa/BottomDialog/tree/master/app)
 ### App using Bottom Dialog
 If you use this lib [contact me](mailto:raphaelbussa@gmail.com) and I will add it to the list below:
 
 ### Developed By
 Raphaël Bussa - [raphaelbussa@gmail.com](mailto:raphaelbussa@gmail.com)
 
-[ ![Twitter](https://raw.githubusercontent.com/rebus007/BottomDialog/master/img/social/twitter-icon.png) ](https://twitter.com/raphaelbussa)[ ![Linkedin](https://raw.githubusercontent.com/rebus007/BottomDialog/master/img/social/linkedin-icon.png) ](https://www.linkedin.com/in/raphaelbussa)
+[ ![Twitter](https://raw.githubusercontent.com/raphaelbussa/BottomDialog/master/img/social/twitter-icon.png) ](https://twitter.com/raphaelbussa)[ ![Linkedin](https://raw.githubusercontent.com/raphaelbussa/BottomDialog/master/img/social/linkedin-icon.png) ](https://www.linkedin.com/in/raphaelbussa)
 
 ### License
 ```
